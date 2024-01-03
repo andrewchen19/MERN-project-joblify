@@ -42,8 +42,8 @@ const Login = () => {
   const demoUserHandler = async () => {
     try {
       const response = await customFetch.post("/auth/login", {
-        email: import.meta.env.VITE_DEMO_USER_EMAIL,
-        password: import.meta.env.VITE_DEMO_USER_PASSWORD,
+        email: "testUser@test.com",
+        password: "secret",
       });
 
       const user = response.data.user;
