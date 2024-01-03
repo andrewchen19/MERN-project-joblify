@@ -59,11 +59,11 @@ const Login = () => {
   };
 
   return (
-    <section className="bg-slate-50 min-h-screen grid place-items-center">
+    <section className="bg-base-100 min-h-screen grid place-items-center">
       {/* prevents the browser from sending request, instead sends the request to your route action */}
       <Form
         method="POST"
-        className="card w-96 p-8 bg-base-100 shadow-lg flex flex-col gap-y-4 "
+        className="card w-96 p-8 bg-base-300 shadow-lg flex flex-col gap-y-4 "
       >
         {/* logo */}
         <div className="flex justify-center">
