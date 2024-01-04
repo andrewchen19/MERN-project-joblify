@@ -11,7 +11,7 @@ const getAllUsers = async (req, res) => {
 
     res.status(200).json({ users, count: users.length });
   } catch (error) {
-    res.status(500).json({ msg: error });
+    res.status(500).json({ error });
   }
 };
 
@@ -56,7 +56,7 @@ const updateUser = async (req, res) => {
 
     res.status(200).json({ msg: "Update successful", user: userData });
   } catch (error) {
-    res.status(500).json({ msg: error });
+    res.status(500).json({ error });
   }
 };
 

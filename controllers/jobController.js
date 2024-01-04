@@ -84,7 +84,7 @@ const getAllJobs = async (req, res) => {
 
     res.status(200).json({ jobs, totalJobs, numOfPages });
   } catch (error) {
-    res.status(500).json({ msg: error });
+    res.status(500).json({ error });
   }
 };
 
@@ -109,7 +109,7 @@ const getJob = async (req, res) => {
       // Not Found
       return res.status(404).json({ msg: `No job with id: ${_id}` });
     } else {
-      res.status(500).json({ msg: error });
+      res.status(500).json({ error });
     }
   }
 };
@@ -134,7 +134,7 @@ const createJob = async (req, res) => {
     // Created
     res.status(201).json({ msg: "Create successful" });
   } catch (error) {
-    res.status(500).json({ msg: error });
+    res.status(500).json({ error });
   }
 };
 
@@ -172,7 +172,7 @@ const updateJob = async (req, res) => {
       // Not Found
       return res.status(404).json({ msg: `No job with id: ${_id}` });
     } else {
-      res.status(500).json({ msg: error });
+      res.status(500).json({ error });
     }
   }
 };
@@ -199,7 +199,7 @@ const deleteJob = async (req, res) => {
       // Not Found
       return res.status(404).json({ msg: `No job with id: ${_id}` });
     } else {
-      res.status(500).json({ msg: error });
+      res.status(500).json({ error });
     }
   }
 };
